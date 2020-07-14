@@ -1,2 +1,10 @@
-<h1>WTF</h1>
-<router-outlet></router-outlet>
+<mat-sidenav-container class="admin-container">
+  <mat-sidenav #sidenav class="sidenav-container" [mode]="mode.value" opened>
+    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
