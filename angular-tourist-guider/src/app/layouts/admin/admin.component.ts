@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 import { FormControl } from '@angular/forms';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-admin',
@@ -8,8 +9,37 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent implements OnInit {
-  mode = new FormControl('side');
+
+  public sidebarMode = new FormControl('side');
+  public isMobile = false;
+
+  private screenHeight: any;
+  private screenWidth: any;
+
+  @ViewChild('sidenav') sidenav: MatSidenav;
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
+
+    if (this.screenWidth < 800) {
+      if (this.sidenav) {
+        this.sidenav.close() // we close sidenav
+        // console.log( this.sidenav.close())
+      }
+    }
+  }
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getScreenSize()
+    if (this.screenWidth < 800) {
+      // if device have small screen, side bar will initialize as over
+      this.sidebarMode = new FormControl('over');
+      this.isMobile = true;
+      this.sidenav.close();
+    }
+  }
 }
