@@ -1,0 +1,15 @@
+@import '../../../styles_variables.scss';
+
+nav {
+  background-color: $bg-primary;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  img {
+    padding: 0;
+    margin: 0;
+    width: 176;
+    height: 73;
+  }
+}

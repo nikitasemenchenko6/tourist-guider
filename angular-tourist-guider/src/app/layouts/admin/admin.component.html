@@ -1,10 +1,18 @@
-<mat-sidenav-container class="admin-container">
-  <mat-sidenav #sidenav class="sidenav-container" [mode]="sidebarMode.value" [opened]="!isMobile">
-    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-  </mat-sidenav>
+<div>
+  <app-topnav></app-topnav>
+  <mat-sidenav-container class="admin-container">
+    <mat-sidenav
+      #sidenav
+      class="sidenav-container"
+      [mode]="sidebarMode.value"
+      [opened]="!isMobile"
+    >
+      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+    </mat-sidenav>
 
-  <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    <mat-sidenav-content>
+      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

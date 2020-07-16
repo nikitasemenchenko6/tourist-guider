@@ -8,8 +8,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 
+import { TopnavComponent } from '../../components/topnav/topnav.component';
+
 @NgModule({
-  declarations: [AdminComponent],
+  declarations: [AdminComponent, TopnavComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
