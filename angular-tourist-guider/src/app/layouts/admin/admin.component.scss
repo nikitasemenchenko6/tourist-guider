@@ -58,4 +58,23 @@
       }
     }
   }
+
+  .toggle-container {
+    background-color: $bg-accent;
+    position: fixed;
+    height: 62px;
+    display: flex;
+    width: 50px;
+    align-items: center;
+
+    img {
+      padding: 0 10px;
+      height: 62px;
+
+      &:hover {
+        background: $bg-accent-hover;
+        cursor: pointer;
+      }
+    }
+  }
 }
