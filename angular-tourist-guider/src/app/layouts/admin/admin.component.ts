@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 
 import { FormControl } from '@angular/forms';
 import { MatSidenav } from '@angular/material/sidenav';
@@ -9,7 +9,10 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent implements OnInit {
-
+  public routes: Array<{ name: string; value: string }> = [
+    { name: 'map items', value: '/admin' },
+    { name: 'add items', value: '/admin/add-items' },
+  ];
   public sidebarMode = new FormControl('side');
   public isMobile = false;
 
@@ -25,7 +28,7 @@ export class AdminComponent implements OnInit {
 
     if (this.screenWidth < 800) {
       if (this.sidenav) {
-        this.sidenav.close() // we close sidenav
+        this.sidenav.close(); // we close sidenav
         // console.log( this.sidenav.close())
       }
     }
@@ -34,12 +37,14 @@ export class AdminComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.getScreenSize()
+    this.getScreenSize();
     if (this.screenWidth < 800) {
       // if device have small screen, side bar will initialize as over
       this.sidebarMode = new FormControl('over');
       this.isMobile = true;
-      this.sidenav.close();
+      if (this.sidenav) {
+        this.sidenav.close();
+      }
     }
   }
 }

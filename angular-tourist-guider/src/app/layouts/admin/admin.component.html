@@ -7,7 +7,20 @@
       [mode]="sidebarMode.value"
       [opened]="!isMobile"
     >
-      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+      <div class="sidenav-header">
+        <img src="/assets/icons/more-vertical.svg" (click)="sidenav.toggle()" />
+      </div>
+      <ul>
+        <li
+          *ngFor="let route of routes"
+          [routerLink]="route.value"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="isMobile ? sidenav.toggle() : ''"
+        >
+          {{ route.name }}
+        </li>
+      </ul>
     </mat-sidenav>
 
     <mat-sidenav-content>

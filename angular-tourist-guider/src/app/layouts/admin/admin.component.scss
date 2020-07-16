@@ -1,8 +1,61 @@
+@import '../../../styles_variables.scss';
+
+.mat-drawer-side {
+  // to remove mat-drawer border
+  border-right: solid 0px rgba(0, 0, 0, .12);
+}
+
 .admin-container {
-  height: 100vh;
+  min-height: calc(100vh - 73px);
 
   .sidenav-container {
-    background: red;
+    background: $bg-primary;
     width: 300px;
+
+    .sidenav-header {
+      background-color: $bg-secondary;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+
+      img {
+        padding: 0 10px;
+        height: 62px;
+
+        &:hover {
+          background: $bg-secondary-hover;
+          cursor: pointer;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0px 30px;
+      margin-top: 50px;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $text-grey;
+        font-size: 18px;
+        padding: 20px 0px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: $bg-primary-hover;
+        }
+
+        &.active-link {
+          color: $text-light;
+          border: solid 1px whitesmoke;
+          border-radius: 5px;
+        }
+      }
+    }
   }
 }
