@@ -60,9 +60,10 @@
   }
 
   .toggle-container {
-    background-color: $bg-accent;
+    background-color: $bg-primary;
     position: fixed;
-    height: 62px;
+    top: 0;
+    height: 73px;
     display: flex;
     width: 50px;
     align-items: center;
