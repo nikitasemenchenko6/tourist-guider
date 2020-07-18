@@ -7,11 +7,23 @@ import { MatRadioModule } from '@angular/material/radio';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
-
+// pages
+import { MapItemsComponent } from '../../pages/map-items/map-items.component';
+import { AddItemsComponent } from '../../pages/add-items/add-items.component';
+// components
 import { TopnavComponent } from '../../components/topnav/topnav.component';
+import { SearchBarComponent } from '../../components/utility/search-bar/search-bar.component';
 
 @NgModule({
-  declarations: [AdminComponent, TopnavComponent],
+  declarations: [
+    AdminComponent,
+    // pages
+    MapItemsComponent,
+    AddItemsComponent,
+    // components
+    TopnavComponent,
+    SearchBarComponent,
+  ],
   imports: [
     CommonModule,
     AdminRoutingModule,

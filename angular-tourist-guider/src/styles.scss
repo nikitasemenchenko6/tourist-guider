@@ -1,4 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styles_variables.scss';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.page-container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 770px) {
+  .page-container {
+    max-width: 1370px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}

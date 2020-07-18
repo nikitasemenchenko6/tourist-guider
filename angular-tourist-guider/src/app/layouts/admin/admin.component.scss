@@ -6,7 +6,7 @@
 }
 
 .admin-container {
-  min-height: calc(100vh - 73px);
+  min-height: $full-page-height;
 
   .sidenav-container {
     background: $bg-primary;

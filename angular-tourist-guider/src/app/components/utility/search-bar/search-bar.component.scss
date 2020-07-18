@@ -1,0 +1,25 @@
+@import '../../../../styles_variables.scss';
+
+input[type=text] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+}
+
+input:focus {
+  border: none;
+  outline-width: 0;
+}
+
+.search-container {
+  display: flex;
+
+  button {
+    float: right;
+    padding: 6px 10px;
+    background: $bg-primary;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+  }
+}
