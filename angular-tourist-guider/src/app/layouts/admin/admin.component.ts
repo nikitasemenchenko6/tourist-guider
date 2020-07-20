@@ -26,7 +26,7 @@ export class AdminComponent implements OnInit {
     this.screenHeight = window.innerHeight;
     this.screenWidth = window.innerWidth;
 
-    if (this.screenWidth < 800) {
+    if (this.screenWidth < 900) {
       if (this.sidenav) {
         this.sidenav.close(); // we close sidenav
         // console.log( this.sidenav.close())
