@@ -2,6 +2,7 @@
 
 .map-items-container {
   min-height: $full-page-height;
+  background-color: $bg-secondary;
 
   nav {
     height: 62px;
@@ -17,7 +18,7 @@
     .sort-container {
       display: flex;
       align-items: center;
-      background-color: $bg-secondary;
+      background-color: #67aace4f;
       padding-left: 0;
       height: 51px;
       width: 100%;
@@ -40,6 +41,27 @@
         font-weight: bold;
         padding: 0 5px;
         margin-left: 10px;
+      }
+    }
+
+    .filter-container {
+      display: flex;
+      justify-content: flex-end;
+      height: 51px;
+
+      label {
+        background-color: $bg-primary;
+        padding: 10px 20px;
+        color: $text-light;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+      }
+
+      select {
+        background-color: whitesmoke;
+        font-weight: bold;
+        text-align: center;
       }
     }
   }
@@ -68,6 +90,17 @@
         label {
           padding: 0 10px;
           margin-left: 20px;
+        }
+      }
+
+      .filter-container {
+
+        label,
+        select {
+          -webkit-box-shadow: -1px 5px 7px 1px rgba(0, 0, 0, 0.44);
+          -moz-box-shadow: -1px 5px 7px 1px rgba(0, 0, 0, 0.44);
+          box-shadow: -1px 5px 7px 1px rgba(0, 0, 0, 0.44);
+
         }
       }
     }
