@@ -1,8 +1,8 @@
-@import '../../../styles_variables.scss';
+@import "../../../styles_variables.scss";
 
 .mat-drawer-side {
   // to remove mat-drawer border
-  border-right: solid 0px rgba(0, 0, 0, .12);
+  border-right: solid 0px rgba(0, 0, 0, 0.12);
 }
 
 .admin-container {
@@ -69,8 +69,8 @@
     align-items: center;
 
     img {
-      padding: 0 10px;
-      height: 73px;
+      padding: 16.5px 10px;
+      height: 40px;
 
       &:hover {
         background: $bg-primary-hover;
