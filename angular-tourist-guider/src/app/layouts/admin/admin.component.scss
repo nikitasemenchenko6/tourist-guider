@@ -11,6 +11,7 @@
   .sidenav-container {
     background: $bg-primary;
     width: 300px;
+    padding-top: 73px;
 
     .sidenav-header {
       background-color: $bg-secondary;
@@ -55,26 +56,6 @@
           border: solid 1px whitesmoke;
           border-radius: 5px;
         }
-      }
-    }
-  }
-
-  .toggle-container {
-    background-color: $bg-primary;
-    position: fixed;
-    top: 0;
-    height: 73px;
-    display: flex;
-    width: 50px;
-    align-items: center;
-
-    img {
-      padding: 16.5px 10px;
-      height: 40px;
-
-      &:hover {
-        background: $bg-primary-hover;
-        cursor: pointer;
       }
     }
   }

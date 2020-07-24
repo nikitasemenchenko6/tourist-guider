@@ -14,6 +14,7 @@ export class AdminComponent implements OnInit {
     { name: 'add items', value: '/admin/add-items' },
   ];
   public sidebarMode = new FormControl('side');
+  public showMenuTopnav: boolean = false;
   public isMobile = false;
 
   private screenHeight: any;
@@ -29,22 +30,24 @@ export class AdminComponent implements OnInit {
     if (this.screenWidth < 900) {
       if (this.sidenav) {
         this.sidenav.close(); // we close sidenav
-        // console.log( this.sidenav.close())
       }
     }
   }
-
   constructor() {}
 
   ngOnInit(): void {
     this.getScreenSize();
+
     if (this.screenWidth < 800) {
       // if device have small screen, side bar will initialize as over
       this.sidebarMode = new FormControl('over');
       this.isMobile = true;
+      this.showMenuTopnav = true;
       if (this.sidenav) {
         this.sidenav.close();
       }
+    } else {
+      this.showMenuTopnav = false;
     }
   }
 }

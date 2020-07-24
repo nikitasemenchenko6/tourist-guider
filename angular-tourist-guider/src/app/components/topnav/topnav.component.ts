@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-topnav',
@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topnav.component.scss'],
 })
 export class TopnavComponent implements OnInit {
+  @Output() menuToggled: EventEmitter<any> = new EventEmitter();
+  @Input() showMenuToggle: boolean;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  public menuClicked() {
+    this.menuToggled.emit();
+  }
 }

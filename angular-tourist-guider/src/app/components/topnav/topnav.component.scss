@@ -1,15 +1,47 @@
-@import '../../../styles_variables.scss';
+@import "../../../styles_variables.scss";
 
 nav {
   background-color: $bg-primary;
   padding: 0;
   display: flex;
   justify-content: center;
+  // position: sticky;
+  // top: 0;
+  // z-index: 10;
 
   img {
     padding: 0;
     margin: 0;
     width: 176;
     height: 73;
+  }
+
+  .toggle-container {
+    background-color: $bg-primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 73px;
+    display: flex;
+    width: 50px;
+    align-items: center;
+    z-index: 99999;
+    img {
+      padding: 16.5px 10px;
+      height: 40px;
+
+      &:hover {
+        background: $bg-primary-hover;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 }

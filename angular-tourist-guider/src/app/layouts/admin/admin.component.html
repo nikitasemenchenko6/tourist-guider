@@ -1,11 +1,17 @@
 <div>
-  <app-topnav></app-topnav>
+  <app-topnav
+    (menuToggled)="sidenav.toggle()"
+    [showMenuToggle]="showMenuTopnav"
+  ></app-topnav>
   <mat-sidenav-container class="admin-container">
     <mat-sidenav
       #sidenav
       class="sidenav-container"
       [mode]="sidebarMode.value"
       [opened]="!isMobile"
+      [fixedInViewport]="true"
+      (opened)="showMenuTopnav = false"
+      (closed)="showMenuTopnav = true"
     >
       <div class="sidenav-header">
         <img src="/assets/icons/more-vertical.svg" (click)="sidenav.toggle()" />
@@ -22,11 +28,7 @@
         </li>
       </ul>
     </mat-sidenav>
-
     <mat-sidenav-content>
-      <div class="toggle-container" *ngIf="!sidenav.opened">
-        <img src="/assets/icons/more-vertical.svg" (click)="sidenav.toggle()" />
-      </div>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
