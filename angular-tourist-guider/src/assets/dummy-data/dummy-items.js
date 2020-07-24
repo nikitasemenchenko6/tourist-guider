@@ -55,4 +55,25 @@ export const mapItems = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nlputate. Lorem ipsum dolor...",
     created: "2020/07/24",
   },
+  {
+    name: "Flying Contest",
+    category: "variety show",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nlputate. Lorem ipsum dolor...",
+    created: "2020/07/24",
+  },
+  {
+    name: "Jumping Contest",
+    category: "variety show",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nlputate. Lorem ipsum dolor...",
+    created: "2020/07/11",
+  },
+  {
+    name: "Swiming Contest",
+    category: "variety show",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nlputate. Lorem ipsum dolor...",
+    created: "2020/07/24",
+  },
 ];

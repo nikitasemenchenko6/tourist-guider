@@ -24,7 +24,12 @@
       </select>
     </div>
     <div class="items-list-container">
-      <div class="map-items" *ngFor="let item of mapItems">
+      <div
+        class="map-items"
+        *ngFor="
+          let item of mapItems | paginate: { itemsPerPage: 8, currentPage: p }
+        "
+      >
         <div class="top">
           <div class="name">
             <strong>{{ item.name }}</strong>
@@ -49,6 +54,9 @@
             </span>
           </div>
         </div>
+      </div>
+      <div class="paginate-container">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
       </div>
     </div>
   </div>

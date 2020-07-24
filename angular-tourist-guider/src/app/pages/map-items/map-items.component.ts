@@ -7,9 +7,12 @@ import { mapItems } from '../../../assets/dummy-data/dummy-items.js';
   styleUrls: ['./map-items.component.scss'],
 })
 export class MapItemsComponent implements OnInit {
+  p: number = 1;
+  mapItems: any[] = mapItems;
+
   constructor() {}
 
-  public mapItems = mapItems;
+  // public mapItems = mapItems;
   ngOnInit(): void {
     console.log(this.mapItems);
   }

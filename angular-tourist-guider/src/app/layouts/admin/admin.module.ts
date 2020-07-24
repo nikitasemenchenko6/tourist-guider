@@ -5,6 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
 
+// import { BrowserModule } from '@angular/platform-browser';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 // pages
@@ -31,6 +34,8 @@ import { SearchBarComponent } from '../../components/utility/search-bar/search-b
     ReactiveFormsModule,
     MatSidenavModule,
     MatRadioModule,
+    // BrowserModule,
+    NgxPaginationModule,
   ],
 })
 export class AdminModule {}
