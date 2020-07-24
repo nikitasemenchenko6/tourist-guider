@@ -5,9 +5,9 @@ nav {
   padding: 0;
   display: flex;
   justify-content: center;
-  // position: sticky;
-  // top: 0;
-  // z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   img {
     padding: 0;
@@ -38,10 +38,5 @@ nav {
   }
 }
 
-@media (min-width: 900px) {
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-}
+// @media (min-width: 900px) {
+// }
