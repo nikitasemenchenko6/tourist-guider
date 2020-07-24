@@ -32,7 +32,7 @@
       P {
         background-color: $bg-primary;
         color: $text-light;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bolder;
         margin: 0 10px 0 0;
         padding: 0 10px;
@@ -59,6 +59,7 @@
       label {
         background-color: $bg-primary;
         padding: 10px 20px;
+        font-size: 14px;
         color: $text-light;
         font-weight: bolder;
         display: flex;
@@ -207,11 +208,13 @@
 
         p {
           padding: 0 10px;
+          font-size: 16px;
         }
 
         label {
           padding: 0 10px;
           margin-left: 20px;
+          font-size: 16px;
         }
       }
 

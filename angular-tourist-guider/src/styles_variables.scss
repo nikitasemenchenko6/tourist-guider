@@ -1,12 +1,16 @@
-$bg-primary: #2F4858;
+$bg-primary: #2f4858;
 $bg-primary-hover: #345061;
-$bg-secondary: #33658A;
+$bg-secondary: #33658a;
 $bg-secondary-hover: #39709b;
-$bg-accent: #86BBD8;
+$bg-accent: #86bbd8;
 $bg-accent-hover: #78a7c0;
 
-$text-light: #FFF4F4;
-$text-grey: #9F9F9F;
+$text-light: #fff4f4;
+$text-grey: #9f9f9f;
 $text-dark: #040404;
 
 $full-page-height: calc(100vh - 73px);
+
+@media (min-width: 770px) {
+  $full-page-height: calc(100vh - 53px);
+}

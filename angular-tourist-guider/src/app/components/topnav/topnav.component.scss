@@ -12,8 +12,8 @@ nav {
   img {
     padding: 0;
     margin: 0;
-    width: 176;
-    height: 73;
+    width: 150px;
+    height: 53px;
   }
 
   .toggle-container {
@@ -21,13 +21,13 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 73px;
+    height: 53px;
     display: flex;
     width: 50px;
     align-items: center;
     z-index: 99999;
     img {
-      padding: 16.5px 10px;
+      padding: 6.5px 10px;
       height: 40px;
 
       &:hover {
@@ -38,5 +38,18 @@ nav {
   }
 }
 
-// @media (min-width: 900px) {
-// }
+@media (min-width: 770px) {
+  nav {
+    img {
+      width: 176px;
+      height: 73px;
+    }
+    .toggle-container {
+      height: 73px;
+      img {
+        padding: 16.5px 10px;
+        height: 40px;
+      }
+    }
+  }
+}
