@@ -78,7 +78,7 @@
       .map-items {
         background-color: whitesmoke;
         padding: 15px 20px;
-        border-radius: 5px;
+        border-radius: 3px;
         margin-bottom: 10px;
 
         .top {
@@ -94,7 +94,7 @@
           }
         }
         hr {
-          margin: 20px 0;
+          margin: 5px 0;
         }
         .bottom {
           display: flex;
@@ -167,7 +167,7 @@
         padding: 25px 20px 0 20px;
 
         .map-items {
-          padding: 30px 20px 20px 20px;
+          padding: 20px 20px 10px 20px;
 
           .top {
             .category {
@@ -176,6 +176,9 @@
                 margin-right: 10px;
               }
             }
+          }
+          hr {
+            margin: 10px;
           }
           .bottom {
             .options {
@@ -186,6 +189,23 @@
                 margin-right: 20px;
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2100px) {
+  .map-items-container {
+    .page-container {
+      .items-list-container {
+        .map-items {
+          font-size: 20px;
+          padding: 50px 30px 20px 30px;
+
+          hr {
+            margin: 20px;
           }
         }
       }
