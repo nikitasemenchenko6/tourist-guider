@@ -18,6 +18,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    padding-bottom: 20px;
 
     .sort-container {
       display: flex;
@@ -119,6 +120,67 @@
           }
         }
       }
+      .paginate-container {
+        /*** Pagination Styling Starts Here... ***/
+        margin-top: 50px;
+        text-align: center;
+
+        .my-pagination ::ng-deep {
+          .ngx-pagination {
+            li {
+              background: #67aace4f;
+              // color: grey;
+              &.ng-star-inserted .ng-star-inserted {
+                padding: 10px;
+                color: rgb(190, 192, 194);
+                &:hover {
+                  color: #333 !important;
+                  font-weight: bold;
+                }
+              }
+              &.disabled {
+                padding: 10px !important;
+              }
+              &.current {
+                padding: 10px;
+                .ng-star-inserted,
+                .ng-star-inserted:hover {
+                  color: #fff !important;
+                  font-weight: bolder;
+                }
+
+                span {
+                  &.ng-star-inserted {
+                    padding: 0;
+                  }
+                }
+              }
+              &.pagination-previous,
+              &.pagination-next {
+                font-weight: bolder;
+                background-color: $bg-primary;
+                &:hover .ng-star-inserted {
+                  background-color: $bg-primary;
+                }
+                &.disabled {
+                  cursor: not-allowed;
+                  .ng-star-inserted,
+                  .ng-star-inserted:hover {
+                    color: rgb(179, 179, 180) !important;
+                  }
+                }
+                .ng-star-inserted {
+                  color: rgb(179, 179, 180) !important;
+                  &:hover {
+                    color: #fff !important;
+                  }
+                }
+              }
+              // .current {}
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -134,6 +196,7 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto 1fr;
       margin-top: 40px;
+      padding-bottom: 100px;
 
       .sort-container {
         grid-column: 1/2;
@@ -187,6 +250,34 @@
 
               span {
                 margin-right: 20px;
+              }
+            }
+          }
+        }
+        .paginate-container {
+          margin-top: 50px;
+          // background-color: red;
+          text-align: right;
+          .my-pagination ::ng-deep {
+            .ngx-pagination {
+              li {
+                background: #67aace4f;
+
+                &.ng-star-inserted .ng-star-inserted {
+                  padding: 15px;
+                }
+                &.disabled {
+                  padding: 15px !important;
+                }
+                &.current {
+                  padding: 15px;
+
+                  span {
+                    &.ng-star-inserted {
+                      padding: 0;
+                    }
+                  }
+                }
               }
             }
           }
