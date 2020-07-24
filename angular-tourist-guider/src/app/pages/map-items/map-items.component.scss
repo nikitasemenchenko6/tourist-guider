@@ -133,7 +133,7 @@
     .page-container {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto 1fr;
-      margin-top: 60px;
+      margin-top: 40px;
 
       .sort-container {
         grid-column: 1/2;
@@ -164,7 +164,7 @@
       }
       .items-list-container {
         margin-top: 2rem;
-        padding-top: 35px;
+        padding: 25px 20px 0 20px;
 
         .map-items {
           padding: 30px 20px 20px 20px;
