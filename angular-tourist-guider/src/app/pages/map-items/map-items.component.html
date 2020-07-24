@@ -24,21 +24,21 @@
       </select>
     </div>
     <div class="items-list-container">
-      <div class="map-items">
+      <div class="map-items" *ngFor="let item of mapItems">
         <div class="top">
           <div class="name">
-            <strong>Basket Ball Tournament</strong>
+            <strong>{{ item.name }}</strong>
           </div>
           <div class="category">
             <img src="assets/icons/map-pin.svg" alt="" srcset="" />
-            <span>Sports Show</span>
+            <span>{{ item.category }}</span>
           </div>
         </div>
         <hr />
         <div class="bottom">
           <div class="date">
             <strong>Created:</strong>
-            <span>2020/8/21</span>
+            <span>{{ item.created }}</span>
           </div>
           <div class="options">
             <span>
