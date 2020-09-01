@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { mapItems } from '../../../assets/dummy-data/dummy-items.js';
+// import { mapItems } from '../../../assets/dummy-data/dummy-items.js';
+import { Item } from 'src/app/models/Item';
+// import { Observable } from 'rxjs';
+import { select, Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-map-items',
@@ -8,12 +11,14 @@ import { mapItems } from '../../../assets/dummy-data/dummy-items.js';
 })
 export class MapItemsComponent implements OnInit {
   p: number = 1;
-  mapItems: any[] = mapItems;
+  mapItems: Item[];
 
-  constructor() {}
-
-  // public mapItems = mapItems;
-  ngOnInit(): void {
-    console.log(this.mapItems);
+  constructor(private store: Store<{ items: Item[] }>) {
+    this.store.pipe(select('items')).subscribe((values) => {
+      console.log(values);
+      this.mapItems = values;
+    });
   }
+
+  ngOnInit(): void {}
 }
