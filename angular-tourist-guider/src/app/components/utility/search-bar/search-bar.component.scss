@@ -1,19 +1,8 @@
-@import '../../../../styles_variables.scss';
-
-input[type=text] {
-  padding: 6px;
-  font-size: 17px;
-  border: none;
-}
-
-input:focus {
-  border: none;
-  outline-width: 0;
-}
+@import "../../../../styles_variables.scss";
 
 .search-container {
   display: flex;
-
+  width: inherit;
   button {
     float: right;
     padding: 6px 10px;
@@ -22,4 +11,18 @@ input:focus {
     border: none;
     cursor: pointer;
   }
+  input[type="text"] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    width: 100%;
+  }
+
+  input:focus {
+    border: none;
+    outline-width: 0;
+  }
+}
+
+@media (min-width: 770px) {
 }

@@ -5,13 +5,10 @@
   background-color: $bg-secondary;
 
   nav {
-    height: 62px;
     background-color: $bg-accent;
-    display: flex;
-    justify-content: center;
-
     align-items: center;
     padding-right: 6px;
+    padding: 2px 0;
   }
 
   .page-container {
@@ -189,8 +186,9 @@
 @media (min-width: 770px) {
   .map-items-container {
     nav {
+      display: flex;
       justify-content: flex-end;
-      padding-right: 20px;
+      padding: 5px 10px 5px;
     }
 
     .page-container {
