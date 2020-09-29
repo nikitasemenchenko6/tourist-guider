@@ -27,7 +27,9 @@
       <div
         class="map-items"
         *ngFor="
-          let item of mapItems | paginate: { itemsPerPage: 8, currentPage: p }
+          let item of mapItems
+            | async
+            | paginate: { itemsPerPage: 8, currentPage: p }
         "
       >
         <div class="top">
