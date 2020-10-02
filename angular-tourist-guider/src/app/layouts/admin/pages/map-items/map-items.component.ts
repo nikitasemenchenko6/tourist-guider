@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 // import { mapItems } from '../../../assets/dummy-data/dummy-items.js';
 import { MapMarker } from 'src/app/models/MapMarker';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
-import { select, Store } from '@ngrx/store';
+import { Store } from '@ngrx/store';
+import { getMarkers } from 'src/app/markers/state/map-marker.reducer';
 
 @Component({
   selector: 'app-map-items',
@@ -17,7 +17,7 @@ export class MapItemsComponent implements OnInit {
   constructor(private store: Store<{ mapMarkers: MapMarker[] }>) {}
 
   ngOnInit(): void {
-    this.mapItems = this.store.select('mapMarkers');
+    this.mapItems = this.store.select(getMarkers);
     // this.mapItems.subscribe((e) => console.log(e));
   }
 }
