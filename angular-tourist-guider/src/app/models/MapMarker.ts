@@ -1,4 +1,4 @@
-export class Item {
+export class MapMarker {
   id: number;
   name: string;
   category: string;

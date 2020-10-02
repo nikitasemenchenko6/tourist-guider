@@ -11,11 +11,13 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 // pages
-import { MapItemsComponent } from '../../pages/map-items/map-items.component';
-import { AddItemsComponent } from '../../pages/add-items/add-items.component';
+import { MapItemsComponent } from 'src/app/layouts/admin/pages/map-items/map-items.component';
+import { AddItemsComponent } from 'src/app/layouts/admin/pages/add-items/add-items.component';
 // components
 import { TopnavComponent } from '../../components/topnav/topnav.component';
 import { SearchBarComponent } from '../../components/utility/search-bar/search-bar.component';
+// Other feature Modules
+import { MarkerModule } from 'src/app/markers/marker.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { SearchBarComponent } from '../../components/utility/search-bar/search-b
     MatRadioModule,
     // BrowserModule,
     NgxPaginationModule,
+    MarkerModule,
   ],
 })
 export class AdminModule {}

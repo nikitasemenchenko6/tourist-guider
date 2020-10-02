@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
-import { MapItemsComponent } from '../../pages/map-items/map-items.component';
-import { AddItemsComponent } from '../../pages/add-items/add-items.component';
+import { MapItemsComponent } from 'src/app/layouts/admin/pages/map-items/map-items.component';
+import { AddItemsComponent } from 'src/app/layouts/admin/pages/add-items/add-items.component';
 
 const routes: Routes = [
   {
