@@ -12,4 +12,4 @@ import { mapMarkerReducer } from 'src/app/markers/state/map-marker.reducer';
   ],
   exports: [],
 })
-export class MarkerModule {}
+export class MapMarkerModule {}

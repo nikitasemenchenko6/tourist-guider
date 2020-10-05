@@ -17,7 +17,7 @@ import { AddItemsComponent } from 'src/app/layouts/admin/pages/add-items/add-ite
 import { TopnavComponent } from '../../components/topnav/topnav.component';
 import { SearchBarComponent } from '../../components/utility/search-bar/search-bar.component';
 // Other feature Modules
-import { MarkerModule } from 'src/app/markers/marker.module';
+import { MapMarkerModule } from 'src/app/markers/map-marker.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { MarkerModule } from 'src/app/markers/marker.module';
     MatRadioModule,
     // BrowserModule,
     NgxPaginationModule,
-    MarkerModule,
+    MapMarkerModule,
   ],
 })
 export class AdminModule {}
