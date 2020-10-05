@@ -3,9 +3,11 @@ import {
   createFeatureSelector,
   createReducer,
   createSelector,
+  on,
 } from '@ngrx/store';
 import { MapMarker } from 'src/app/models/MapMarker';
 import { mapItems } from 'src/assets/dummy-data/dummy-items.js';
+import * as MapMarkerActions from 'src/app/markers/state/map-marker.action';
 
 // set mapMarkers initial State Interface
 export interface mapMarkerStateInterface {
@@ -28,5 +30,15 @@ export const getMarkers = createSelector(
 );
 
 export const mapMarkerReducer = createReducer<mapMarkerStateInterface>(
-  initState
+  initState,
+  on(
+    MapMarkerActions.deleteMarker,
+    (state, actions): mapMarkerStateInterface => {
+      const markers = state.markers.filter((item) => item.id != actions.id);
+      return {
+        ...state,
+        markers,
+      };
+    }
+  )
 );
