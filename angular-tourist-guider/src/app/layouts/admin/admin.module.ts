@@ -15,8 +15,6 @@ import { MapItemsComponent } from 'src/app/layouts/admin/pages/map-items/map-ite
 import { AddItemsComponent } from 'src/app/layouts/admin/pages/add-items/add-items.component';
 // components
 import { ComponentsModule } from 'src/app/components/components.module';
-// import { TopnavComponent } from '../../components/topnav/topnav.component';
-// import { SearchBarComponent } from '../../components/utility/search-bar/search-bar.component';
 // Other feature Modules
 import { MapMarkerModule } from 'src/app/markers/map-marker.module';
 
