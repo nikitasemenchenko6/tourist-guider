@@ -48,12 +48,24 @@
             <span>{{ item.created }}</span>
           </div>
           <div class="options">
-            <span>
-              <img src="assets/icons/edit.svg" alt="" srcset="" />
-            </span>
-            <span (click)="deleteItem(item.id)">
+            <button
+              mat-icon-button
+              color="primary"
+              aria-label="Example icon button with a home icon"
+            >
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              color="warn"
+              aria-label="Example icon button with a home icon"
+              (click)="deleteItem(item.id)"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+            <!-- <span (click)="deleteItem(item.id)">
               <img src="assets/icons/trash-2.svg" alt="" srcset="" />
-            </span>
+            </span> -->
           </div>
         </div>
       </div>

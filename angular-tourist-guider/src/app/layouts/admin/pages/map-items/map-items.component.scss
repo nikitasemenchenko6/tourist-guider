@@ -1,5 +1,8 @@
 @import "src/styles_variables.scss";
 
+.primary-icon {
+  fill: red !important;
+}
 .map-items-container {
   min-height: $full-page-height;
   background-color: $bg-secondary;
@@ -101,18 +104,6 @@
           .date {
             strong {
               padding-right: 10px;
-            }
-          }
-
-          .options {
-            span {
-              padding: 5px;
-              border-radius: 5px;
-              cursor: pointer;
-
-              &:hover {
-                background-color: rgba(224, 221, 221, 0.705);
-              }
             }
           }
         }
@@ -242,16 +233,6 @@
           }
           hr {
             margin: 10px;
-          }
-          .bottom {
-            .options {
-              width: 120px;
-              display: flex;
-
-              span {
-                margin-right: 20px;
-              }
-            }
           }
         }
         .paginate-container {

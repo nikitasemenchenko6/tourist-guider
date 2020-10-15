@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 // import { BrowserModule } from '@angular/platform-browser';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -32,6 +33,8 @@ import { MapMarkerModule } from 'src/app/markers/map-marker.module';
     ReactiveFormsModule,
     MatSidenavModule,
     MatRadioModule,
+    MatIconModule,
+    MatButtonModule,
     // BrowserModule,
     NgxPaginationModule,
     MapMarkerModule,
