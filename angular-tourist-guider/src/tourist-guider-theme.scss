@@ -1,0 +1,130 @@
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// we add our custom color palettes  (using http://mcg.mbitson.com)
+// we define our PRIMARY
+$md-primary: (
+  50: #e6e9eb,
+  100: #c1c8cd,
+  200: #97a4ac,
+  300: #6d7f8a,
+  400: #4e6371,
+  500: #2f4858,
+  600: #2a4150,
+  700: #233847,
+  800: #1d303d,
+  900: #12212d,
+  A100: #6dbdff,
+  A200: #3aa5ff,
+  A400: #078eff,
+  A700: #0081ec,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+// we define our ACCENT
+$md-accent: (
+  50: #f0f7fa,
+  100: #dbebf3,
+  200: #c3ddec,
+  300: #aacfe4,
+  400: #98c5de,
+  500: #86bbd8,
+  600: #7eb5d4,
+  700: #73acce,
+  800: #69a4c8,
+  900: #5696bf,
+  A100: #ffffff,
+  A200: #f0f9ff,
+  A400: #bde4ff,
+  A700: #a3daff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+// we define our WARN (optional)
+$md-warn: (
+  50: #faebe1,
+  100: #f3cdb5,
+  200: #ebac83,
+  300: #e28b51,
+  400: #dc722c,
+  500: #d65907,
+  600: #d15106,
+  700: #cc4805,
+  800: #c63e04,
+  900: #bc2e02,
+  A100: #ffe9e5,
+  A200: #ffbfb2,
+  A400: #ff957f,
+  A700: #ff8065,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$tourist-guider-primary: mat-palette($md-primary);
+$tourist-guider-accent: mat-palette($md-accent);
+
+// The warn palette is optional (defaults to red).
+$tourist-guider-warn: mat-palette($md-warn);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as `color` or `typography`.
+$tourist-guider-theme: mat-light-theme(
+  $tourist-guider-primary,
+  $tourist-guider-accent,
+  $tourist-guider-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($tourist-guider-theme);
