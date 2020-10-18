@@ -30,6 +30,11 @@ export const getMarkers = createSelector(
   getMapMarkerFeatureState,
   (state) => state.markers
 );
+// create selectors for searchFilter
+export const getSearchFilter = createSelector(
+  getMapMarkerFeatureState,
+  (state) => state.searchFilter
+)
 
 export const mapMarkerReducer = createReducer<mapMarkerStateInterface>(
   initState,
