@@ -13,11 +13,13 @@ import * as MapMarkerActions from 'src/app/markers/state/map-marker.action';
 export interface mapMarkerStateInterface {
   selectedMarker: MapMarker;
   markers: MapMarker[];
+  searchFilter: string;
 }
 // set mapMarkers initial state values
 export const initState: mapMarkerStateInterface = {
   selectedMarker: null,
   markers: mapItems,
+  searchFilter: ''
 };
 // we make mapMarker selector
 const getMapMarkerFeatureState = createFeatureSelector<mapMarkerStateInterface>(
@@ -37,8 +39,19 @@ export const mapMarkerReducer = createReducer<mapMarkerStateInterface>(
       const markers = state.markers.filter((item) => item.id != actions.id);
       return {
         ...state,
+        // we replace the previous markers with the new markers
         markers,
       };
+    }
+  ),
+  on(
+    MapMarkerActions.searchFilter,
+    (state, actions): mapMarkerStateInterface => {
+      return {
+        ...state,
+        // we add new value to our searchFilter state
+        searchFilter: actions.text
+      }
     }
   )
 );
