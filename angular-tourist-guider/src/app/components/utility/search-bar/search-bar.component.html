@@ -2,5 +2,10 @@
   <button>
     <img src="assets/icons/search.svg" alt="" srcset="" />
   </button>
-  <input type="text" placeholder="Search.." name="search" />
+  <input
+    type="text"
+    placeholder="Search.."
+    (keyup)="searching($event)"
+    name="search"
+  />
 </div>
