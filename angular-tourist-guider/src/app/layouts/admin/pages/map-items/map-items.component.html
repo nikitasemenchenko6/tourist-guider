@@ -24,11 +24,13 @@
       </select>
     </div>
     <div class="items-list-container">
+      {{ searchFilter }}
       <div
         class="map-items"
         *ngFor="
           let item of mapItems
             | async
+            | searchFilterMarker: searchFilter
             | paginate: { itemsPerPage: 8, currentPage: p }
         "
       >
@@ -53,7 +55,7 @@
               color="primary"
               aria-label="Example icon button with a home icon"
             >
-              <mat-icon>edit</mat-icon>
+              <mat-icon style="font-size: 30px">edit</mat-icon>
             </button>
             <button
               mat-icon-button
@@ -61,7 +63,7 @@
               aria-label="Example icon button with a home icon"
               (click)="deleteItem(item.id)"
             >
-              <mat-icon>delete</mat-icon>
+              <mat-icon style="font-size: 30px">delete</mat-icon>
             </button>
             <!-- <span (click)="deleteItem(item.id)">
               <img src="assets/icons/trash-2.svg" alt="" srcset="" />
