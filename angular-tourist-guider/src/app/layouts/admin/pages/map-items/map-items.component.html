@@ -1,6 +1,8 @@
 <div class="map-items-container">
   <nav>
-    <app-search-bar></app-search-bar>
+    <div class="search-container">
+      <app-search-bar></app-search-bar>
+    </div>
   </nav>
   <div class="page-container">
     <div class="sort-container">
@@ -24,7 +26,6 @@
       </select>
     </div>
     <div class="items-list-container">
-      {{ searchFilter }}
       <div
         class="map-items"
         *ngFor="
