@@ -12,6 +12,9 @@
     align-items: center;
     padding-right: 6px;
     padding: 2px 0;
+    .search-container {
+      width: 100%;
+    }
   }
 
   .page-container {
@@ -179,6 +182,9 @@
       display: flex;
       justify-content: flex-end;
       padding: 5px 10px 5px;
+      .search-container {
+        width: 40%;
+      }
     }
 
     .page-container {
