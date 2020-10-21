@@ -8,4 +8,9 @@ export const deleteMarker = createAction(
 export const searchFilter = createAction(
   '[MAP-MARKER SEARCH FILTER] input in searchbar',
   props<{ text: string }>()
-)
+);
+
+export const sortMarkers = createAction(
+  '[MAP-MARKER SORTED] radio inputs',
+  props<{ text: string }>()
+);
