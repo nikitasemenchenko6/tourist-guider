@@ -12,5 +12,5 @@ export const searchFilter = createAction(
 
 export const sortMarkers = createAction(
   '[MAP-MARKER SORTED] radio inputs',
-  props<{ text: string }>()
+  props<{ text: string, ascending: boolean }>()
 );
