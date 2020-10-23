@@ -7,12 +7,55 @@
   <div class="page-container">
     <div class="sort-container">
       <P>Sort by:</P>
-      <label for="none">None</label>
-      <input type="radio" name="sort" id="none" value="none" />
-      <label for="none">Name</label>
-      <input type="radio" name="sort" id="name" value="name" />
-      <label for="none">Date</label>
-      <input type="radio" name="sort" id="date" value="date" />
+      <div class="sort-options">
+        <!-- Sort by None -->
+        <button
+          mat-icon-button
+          aria-label="Sort button None"
+          (click)="selectSortBy('none')"
+          [class]="{ selected: sortBy.value == 'none' }"
+        >
+          None
+        </button>
+        <!-- Sort Name Button -->
+        <button
+          mat-icon-button
+          aria-label="Sort button Name"
+          (click)="selectSortBy('name')"
+          [class]="{ selected: sortBy.value == 'name' }"
+        >
+          Name
+          <mat-icon
+            class="icon"
+            *ngIf="sortBy.ascending && sortBy.value == 'name'"
+            >arrow_drop_up</mat-icon
+          >
+          <mat-icon
+            class="icon"
+            *ngIf="!sortBy.ascending && sortBy.value == 'name'"
+            >arrow_drop_down</mat-icon
+          >
+        </button>
+        <!-- Sort Date Button -->
+        <button
+          mat-icon-button
+          aria-label="Sort button Date"
+          (click)="selectSortBy('date')"
+          [class]="{ selected: sortBy.value == 'date' }"
+        >
+          Date
+          <mat-icon
+            class="icon"
+            *ngIf="sortBy.ascending && sortBy.value == 'date'"
+            >arrow_drop_up</mat-icon
+          >
+          <mat-icon
+            class="icon"
+            *ngIf="!sortBy.ascending && sortBy.value == 'date'"
+            >arrow_drop_down</mat-icon
+          >
+        </button>
+      </div>
     </div>
     <div class="filter-container">
       <label for="filter">Show </label>

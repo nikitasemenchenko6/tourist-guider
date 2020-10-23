@@ -28,6 +28,7 @@
       align-items: center;
       background-color: #67aace4f;
       padding-left: 0;
+      padding-right: 30px;
       height: 51px;
       width: 100%;
       margin-top: 0px;
@@ -43,13 +44,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100px;
       }
 
-      label {
-        color: $text-light;
-        font-weight: bold;
-        padding: 0 5px;
-        margin-left: 10px;
+      .sort-options {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        button {
+          color: rgb(190, 188, 188);
+
+          .icon {
+            color: inherit;
+            font-size: 20px;
+            margin-left: -5px;
+            font-weight: 900;
+          }
+
+          &.selected {
+            color: white;
+          }
+        }
       }
     }
 
@@ -201,12 +216,6 @@
 
         p {
           padding: 0 10px;
-          font-size: 16px;
-        }
-
-        label {
-          padding: 0 10px;
-          margin-left: 20px;
           font-size: 16px;
         }
       }
