@@ -14,3 +14,8 @@ export const sortMarkers = createAction(
   '[MAP-MARKER SORTED] radio inputs',
   props<{ text: string, ascending: boolean }>()
 );
+
+export const categoryFilter = createAction(
+  '[MAP-MARKER CATEGORY FILTER] dropdown show',
+  props<{ text: string }>()
+);
