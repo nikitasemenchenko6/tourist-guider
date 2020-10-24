@@ -14,12 +14,14 @@ export interface mapMarkerStateInterface {
   selectedMarker: MapMarker;
   markers: MapMarker[];
   searchFilter: string;
+  categoryFilter: string;
 }
 // set mapMarkers initial state values
 export const initState: mapMarkerStateInterface = {
   selectedMarker: null,
   markers: [...mapItems],
-  searchFilter: ''
+  searchFilter: '',
+  categoryFilter: 'all',
 };
 // we make mapMarker selector
 const getMapMarkerFeatureState = createFeatureSelector<mapMarkerStateInterface>(
@@ -34,6 +36,11 @@ export const getMarkers = createSelector(
 export const getSearchFilter = createSelector(
   getMapMarkerFeatureState,
   (state) => state.searchFilter
+);
+// create selector for categoryFilter
+export const getCategoryFilter = createSelector(
+  getMapMarkerFeatureState,
+  (state) => state.categoryFilter
 )
 
 export const mapMarkerReducer = createReducer<mapMarkerStateInterface>(
@@ -55,45 +62,50 @@ export const mapMarkerReducer = createReducer<mapMarkerStateInterface>(
       return {
         ...state,
         // we add new value to our searchFilter state
-        searchFilter: actions.text
-      }
+        searchFilter: actions.text,
+      };
     }
   ),
-  on(MapMarkerActions.sortMarkers,
+  on(
+    MapMarkerActions.sortMarkers,
     (state, actions): mapMarkerStateInterface => {
       let markers: MapMarker[] = state.markers;
       switch (actions.text) {
         case 'date':
           if (actions.ascending) {
             markers = [...state.markers].sort((a, b) => {
-              return new Date(b.created).getTime() - new Date(a.created).getTime()
+              return (
+                new Date(b.created).getTime() - new Date(a.created).getTime()
+              );
             });
           } else {
             markers = [...state.markers].sort((a, b) => {
-              return new Date(a.created).getTime() - new Date(b.created).getTime()
+              return (
+                new Date(a.created).getTime() - new Date(b.created).getTime()
+              );
             });
           }
           break;
         case 'name':
           if (actions.ascending) {
             markers = [...state.markers].sort((a, b) => {
-              return a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1
+              return a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1;
             });
           } else {
             markers = [...state.markers].sort((a, b) => {
-              return a.name.toLowerCase() > b.name.toLowerCase() ? -1 : 1
+              return a.name.toLowerCase() > b.name.toLowerCase() ? -1 : 1;
             });
           }
           break;
 
         default:
-          markers = [...mapItems]
+          markers = [...mapItems];
           break;
       }
       return {
         ...state,
-        markers
-      }
+        markers,
+      };
     }
   )
 );
