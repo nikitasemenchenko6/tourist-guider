@@ -69,6 +69,10 @@ export class MapItemsComponent implements OnInit {
     const ascending = this.sortBy.ascending;
     this.store.dispatch(sortMarkers({ text, ascending }));
   }
+  /**
+   *
+   * @param event DOM event holds value on what category filter value
+   */
   selectShowBy(event: Event) {
     const text = (event.target as HTMLInputElement).value;
     this.store.dispatch(categoryFilter({ text }));
