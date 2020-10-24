@@ -59,13 +59,13 @@
     </div>
     <div class="filter-container">
       <label for="filter">Show </label>
-      <select name="filter" id="filter">
+      <select name="filter" id="filter" (change)="selectShowBy($event)">
         <option value="all">All</option>
         <option value="foods/drinks">Foods / Drinks</option>
         <option value="parks/sights">Parks / Sights</option>
         <option value="sleep/rest">Sleep / Rest</option>
-        <option value="sports shows">Sports / Shows</option>
-        <option value="variety shows">Variety / Shows</option>
+        <option value="sports show">Sports Shows</option>
+        <option value="variety show">Variety Shows</option>
       </select>
     </div>
     <div class="items-list-container">
@@ -75,6 +75,7 @@
           let item of mapItems
             | async
             | searchFilterMarker: searchFilter
+            | categoryFilter: categoryFilter
             | paginate: { itemsPerPage: 8, currentPage: p }
         "
       >

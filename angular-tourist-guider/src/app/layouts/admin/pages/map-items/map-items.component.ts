@@ -3,8 +3,16 @@ import { Component, OnInit } from '@angular/core';
 import { MapMarker } from 'src/app/models/MapMarker';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { getMarkers, getSearchFilter, } from 'src/app/markers/state/map-marker.reducer';
-import { deleteMarker, sortMarkers } from 'src/app/markers/state/map-marker.action';
+import {
+  getMarkers,
+  getSearchFilter,
+  getCategoryFilter,
+} from 'src/app/markers/state/map-marker.reducer';
+import {
+  deleteMarker,
+  sortMarkers,
+  categoryFilter,
+} from 'src/app/markers/state/map-marker.action';
 
 @Component({
   selector: 'app-map-items',
@@ -17,21 +25,27 @@ export class MapItemsComponent implements OnInit {
     value: string;
     ascending: boolean;
   } = {
-      value: 'none',
-      ascending: false
-    };
+    value: 'none',
+    ascending: false,
+  };
   mapItems: Observable<MapMarker[]>;
   searchFilter: string;
+  categoryFilter: string;
 
-  constructor(private store: Store<{ mapMarkers: MapMarker[] }>) { }
+  constructor(private store: Store<{ mapMarkers: MapMarker[] }>) {}
 
   ngOnInit(): void {
     /**  we get markers for mapItems */
     this.mapItems = this.store.select(getMarkers);
     // this.mapItems.subscribe((e) => console.log(e));
+
     /** we get the texts for search filtered */
-    this.store.select(getSearchFilter).subscribe(item => {
+    this.store.select(getSearchFilter).subscribe((item) => {
       this.searchFilter = item;
+    });
+    /** we get the value for categoryFilter */
+    this.store.select(getCategoryFilter).subscribe((item) => {
+      this.categoryFilter = item;
     });
   }
   /**
@@ -39,7 +53,7 @@ export class MapItemsComponent implements OnInit {
    * @param id - the ID of the item to be deleted
    */
   deleteItem(id: number) {
-    this.store.dispatch(deleteMarker({ id }))
+    this.store.dispatch(deleteMarker({ id }));
   }
   /**
    *
@@ -53,6 +67,10 @@ export class MapItemsComponent implements OnInit {
     }
     this.sortBy.value = text;
     const ascending = this.sortBy.ascending;
-    this.store.dispatch(sortMarkers({ text, ascending }))
+    this.store.dispatch(sortMarkers({ text, ascending }));
+  }
+  selectShowBy(event: Event) {
+    const text = (event.target as HTMLInputElement).value;
+    this.store.dispatch(categoryFilter({ text }));
   }
 }
