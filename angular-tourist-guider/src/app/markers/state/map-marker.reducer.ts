@@ -67,6 +67,15 @@ export const mapMarkerReducer = createReducer<mapMarkerStateInterface>(
     }
   ),
   on(
+    MapMarkerActions.categoryFilter,
+    (state, actions) => {
+      return {
+        ...state,
+        categoryFilter: actions.text
+      };
+    }
+  ),
+  on(
     MapMarkerActions.sortMarkers,
     (state, actions): mapMarkerStateInterface => {
       let markers: MapMarker[] = state.markers;
