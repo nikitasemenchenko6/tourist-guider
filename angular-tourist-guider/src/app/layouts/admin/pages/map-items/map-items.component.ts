@@ -7,6 +7,7 @@ import {
   getMarkers,
   getSearchFilter,
   getCategoryFilter,
+  mapMarkerStateInterface,
 } from 'src/app/markers/state/map-marker.reducer';
 import {
   deleteMarker,
@@ -32,7 +33,7 @@ export class MapItemsComponent implements OnInit {
   searchFilter: string;
   categoryFilter: string;
 
-  constructor(private store: Store<{ mapMarkers: MapMarker[] }>) {}
+  constructor(private store: Store<{ mapMarkers: mapMarkerStateInterface }>) {}
 
   ngOnInit(): void {
     /**  we get markers for mapItems */
