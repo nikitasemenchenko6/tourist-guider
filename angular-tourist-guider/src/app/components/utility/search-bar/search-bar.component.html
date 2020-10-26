@@ -1,11 +1,23 @@
 <div class="search-container">
-  <button>
+  <button class="search-btn">
     <img src="assets/icons/search.svg" alt="" srcset="" />
   </button>
   <input
     type="text"
     placeholder="Search.."
     (keyup.enter)="searching($event)"
+    [(ngModel)]="searchField"
+    (ngModelChange)="checkSearchField($event)"
     name="search"
   />
+
+  <button
+    mat-flat-button
+    class="clear-btn"
+    aria-label="Example icon button with a vertical three dot icon"
+    (click)="clearSearchField()"
+    *ngIf="searchField"
+  >
+    <mat-icon class="clear-icon">close</mat-icon>
+  </button>
 </div>
