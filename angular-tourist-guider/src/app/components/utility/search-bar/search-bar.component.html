@@ -1,11 +1,11 @@
 <div class="search-container">
-  <button class="search-btn">
+  <button mat-flat-button class="search-btn" (click)="searching()">
     <img src="assets/icons/search.svg" alt="" srcset="" />
   </button>
   <input
     type="text"
     placeholder="Search.."
-    (keyup.enter)="searching($event)"
+    (keyup.enter)="searching()"
     [(ngModel)]="searchField"
     (ngModelChange)="checkSearchField($event)"
     name="search"

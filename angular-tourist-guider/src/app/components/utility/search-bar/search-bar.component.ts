@@ -14,21 +14,16 @@ export class SearchBarComponent implements OnInit {
   searchField: string;
   haveSearched: boolean;
 
-  constructor(private store: Store<{ mapMarkers: mapMarkerStateInterface }>) {}
+  constructor(private store: Store<{ mapMarkers: mapMarkerStateInterface }>) { }
 
   ngOnInit(): void {
     this.store.select(getSearchFilter).subscribe((item) => {
       this.searchField = item;
     });
   }
-  /**
-   *
-   * @param event DOM Event Input field contains searched text value
-   */
-  searching(event: Event) {
-    const text = (event.target as HTMLInputElement).value;
-    // console.log(output.value)
-    this.store.dispatch(searchFilter({ text }));
+
+  searching() {
+    this.store.dispatch(searchFilter({ text: this.searchField }));
   }
   /**
    *
