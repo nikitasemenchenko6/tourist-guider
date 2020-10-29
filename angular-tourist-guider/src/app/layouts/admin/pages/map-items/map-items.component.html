@@ -69,8 +69,7 @@
       </select>
     </div>
     <div class="items-list-container">
-      <div
-        class="map-items"
+      <mat-card
         *ngFor="
           let item of mapItems
             | async
@@ -79,7 +78,7 @@
             | paginate: { itemsPerPage: 8, currentPage: p }
         "
       >
-        <div class="top">
+        <mat-card-title>
           <div class="name">
             <strong>{{ item.name }}</strong>
           </div>
@@ -87,9 +86,9 @@
             <img src="assets/icons/map-pin.svg" alt="" srcset="" />
             <span>{{ item.category }}</span>
           </div>
-        </div>
-        <hr />
-        <div class="bottom">
+        </mat-card-title>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-card-actions>
           <div class="date">
             <strong>Created:</strong>
             <span>{{ item.created }}</span>
@@ -100,7 +99,7 @@
               color="primary"
               aria-label="Example icon button with a home icon"
             >
-              <mat-icon style="font-size: 30px">edit</mat-icon>
+              <mat-icon style="font-size: 28px">edit</mat-icon>
             </button>
             <button
               mat-icon-button
@@ -108,14 +107,12 @@
               aria-label="Example icon button with a home icon"
               (click)="deleteItem(item.id)"
             >
-              <mat-icon style="font-size: 30px">delete</mat-icon>
+              <mat-icon style="font-size: 28px">delete</mat-icon>
             </button>
-            <!-- <span (click)="deleteItem(item.id)">
-              <img src="assets/icons/trash-2.svg" alt="" srcset="" />
-            </span> -->
           </div>
-        </div>
-      </div>
+        </mat-card-actions>
+      </mat-card>
+
       <div class="paginate-container">
         <pagination-controls
           (pageChange)="p = $event"

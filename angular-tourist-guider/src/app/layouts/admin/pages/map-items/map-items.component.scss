@@ -3,6 +3,7 @@
 .primary-icon {
   fill: red !important;
 }
+
 .map-items-container {
   min-height: $full-page-height;
   background-color: $bg-secondary;
@@ -95,30 +96,34 @@
       // background-color: whitesmoke;
       // height: 100%;
 
-      .map-items {
-        background-color: whitesmoke;
-        padding: 15px 20px;
-        margin-bottom: 10px;
-
-        .top {
+      .mat-card {
+        margin-bottom: 8px;
+        .mat-card-title {
           display: flex;
           justify-content: space-between;
+          .name {
+            font-size: 15px;
+          }
           .category {
             display: flex;
             align-items: center;
-
+            font-size: 15px;
             img {
               margin-right: 5px;
             }
           }
         }
-        hr {
-          margin: 5px 0;
+
+        .mat-divider {
+          border-top-width: 2px;
+          border-color: #333;
         }
-        .bottom {
+
+        .mat-card-actions {
+          padding-top: 12px;
+          padding-left: 8px;
           display: flex;
           justify-content: space-between;
-
           .date {
             strong {
               padding-right: 10px;
@@ -126,6 +131,7 @@
           }
         }
       }
+
       .paginate-container {
         /*** Pagination Styling Starts Here... ***/
         margin-top: 50px;
@@ -234,22 +240,23 @@
         margin-top: 2rem;
         padding: 25px 20px 0 20px;
 
-        .map-items {
-          padding: 20px 20px 10px 20px;
-
-          border-radius: 3px;
-          .top {
+        .mat-card {
+          margin-bottom: 15px;
+          .mat-card-title {
+            .name {
+              font-size: 18px;
+            }
             .category {
-              width: 150px;
-              img {
-                margin-right: 10px;
-              }
+              font-size: 15px;
             }
           }
-          hr {
-            margin: 10px;
+
+          .mat-divider {
+            border-top-width: 2px;
+            border-color: #333;
           }
         }
+
         .paginate-container {
           margin-top: 50px;
           // background-color: red;
