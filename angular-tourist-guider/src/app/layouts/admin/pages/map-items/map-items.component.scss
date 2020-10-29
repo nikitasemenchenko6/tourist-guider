@@ -108,6 +108,7 @@
             display: flex;
             align-items: center;
             font-size: 15px;
+            min-width: 150px;
             img {
               margin-right: 5px;
             }
@@ -294,12 +295,10 @@
   .map-items-container {
     .page-container {
       .items-list-container {
-        .map-items {
-          font-size: 20px;
-          padding: 50px 30px 20px 30px;
-
-          hr {
-            margin: 20px;
+        .mat-card {
+          .name {
+            font-size: 20px;
+            padding: 20px 10px 20px 10px;
           }
         }
       }
