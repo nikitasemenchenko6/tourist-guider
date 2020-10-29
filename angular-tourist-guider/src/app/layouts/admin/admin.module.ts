@@ -6,6 +6,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 // import { BrowserModule } from '@angular/platform-browser';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -35,6 +37,8 @@ import { MapMarkerModule } from 'src/app/markers/map-marker.module';
     MatRadioModule,
     MatIconModule,
     MatButtonModule,
+    MatCardModule,
+    MatDividerModule,
     // BrowserModule,
     NgxPaginationModule,
     MapMarkerModule,
