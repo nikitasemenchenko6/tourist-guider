@@ -1,1 +1,23 @@
-<p>add-items works!</p>
+<div class="add-items-container">
+  <div class="page-container">
+    <div class="page-title">Add Item</div>
+    <div class="form-container">
+      <mat-card>
+        <mat-card-content>
+          <mat-form-field class="field-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" />
+            <button mat-button matSuffix mat-icon-button aria-label="Clear">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <mat-form-field class="field-full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

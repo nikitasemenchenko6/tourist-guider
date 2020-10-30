@@ -1,0 +1,15 @@
+@import "src/styles_variables.scss";
+
+.add-items-container {
+  min-height: $full-page-height;
+  background-color: $bg-secondary;
+}
+
+.field-full-width {
+  padding: 20px 10px;
+  width: 100%;
+}
+
+.mat-card-content {
+  padding: 5px 15px;
+}
