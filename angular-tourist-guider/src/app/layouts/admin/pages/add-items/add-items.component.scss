@@ -5,11 +5,41 @@
   background-color: $bg-secondary;
 }
 
+.form-container {
+  margin-top: 30px;
+}
+.page-title {
+  font-size: 24px;
+  padding: 25px 0px 5px;
+  color: $text-light;
+}
+.page-title-helper {
+  color: $text-light;
+}
 .field-full-width {
   padding: 20px 10px;
   width: 100%;
 }
-
+.mat-card {
+  margin-bottom: 8px;
+  padding: 5px;
+  background-color: $text-light;
+}
 .mat-card-content {
-  padding: 5px 15px;
+  padding-right: 25px;
+}
+.mat-form-field {
+  background: $text-light;
+}
+.field-label {
+  font-size: 17px;
+  font-weight: 700;
+  color: #707477;
+}
+
+.categories-section {
+  padding: 10px;
+  .checkbox {
+    margin: 0 10px;
+  }
 }

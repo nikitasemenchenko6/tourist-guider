@@ -1,21 +1,46 @@
 <div class="add-items-container">
   <div class="page-container">
-    <div class="page-title">Add Item</div>
+    <div class="page-title">Marker Information</div>
+    <div class="page-title-helper">Please fill the form below:</div>
     <div class="form-container">
       <mat-card>
         <mat-card-content>
           <mat-form-field class="field-full-width">
-            <mat-label>Name</mat-label>
+            <mat-label class="field-label">Name</mat-label>
             <input matInput type="text" />
             <button mat-button matSuffix mat-icon-button aria-label="Clear">
               <mat-icon>close</mat-icon>
             </button>
+            <mat-hint>Marker Name, Minimum 5 char.</mat-hint>
           </mat-form-field>
+        </mat-card-content>
+      </mat-card>
 
+      <mat-card>
+        <mat-card-content>
           <mat-form-field class="field-full-width">
-            <mat-label>Description</mat-label>
+            <mat-label class="field-label">Description</mat-label>
             <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+            <mat-hint
+              >Marker Descriptions or features, Minimum 15 char.</mat-hint
+            >
           </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content style="padding: 20px 0px">
+          <div class="field-label" style="padding-left: 12px">Categories</div>
+          <section class="categories-section">
+            <mat-checkbox class="checkbox">Item 1</mat-checkbox>
+            <mat-checkbox class="checkbox">Item 2</mat-checkbox>
+            <mat-checkbox class="checkbox">Item 3</mat-checkbox>
+            <mat-checkbox class="checkbox">Item 4</mat-checkbox>
+            <mat-checkbox class="checkbox">Item 5</mat-checkbox>
+          </section>
+          <small style="padding: 0px 12px; color: rgba(0, 0, 0, 0.54)"
+            >Marker Categories or usecase.</small
+          >
         </mat-card-content>
       </mat-card>
     </div>
