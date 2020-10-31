@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 // import { BrowserModule } from '@angular/platform-browser';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -41,6 +42,7 @@ import { MapMarkerModule } from 'src/app/markers/map-marker.module';
     MatCardModule,
     MatDividerModule,
     MatInputModule,
+    MatCheckboxModule,
     // BrowserModule,
     NgxPaginationModule,
     MapMarkerModule,
