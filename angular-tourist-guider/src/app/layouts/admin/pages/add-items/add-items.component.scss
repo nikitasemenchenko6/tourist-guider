@@ -3,6 +3,7 @@
 .add-items-container {
   min-height: $full-page-height;
   background-color: $bg-secondary;
+  padding-bottom: 30px;
 }
 
 .form-container {
@@ -34,12 +35,45 @@
 .field-label {
   font-size: 17px;
   font-weight: 700;
-  color: #707477;
+  color: $text-dark;
 }
 
 .categories-section {
   padding: 10px;
   .checkbox {
     margin: 0 10px;
+  }
+}
+
+.coord-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 180px;
+    padding-top: 8px;
+    small {
+      padding: 10px 12px 0px;
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+}
+
+@media (min-width: 770px) {
+  .page-title {
+    padding-top: 60px;
+  }
+  .mat-card {
+    margin-bottom: 17px;
+  }
+  .coord-container {
+    flex-direction: row;
+    .button-container {
+      margin-right: 20px;
+    }
   }
 }

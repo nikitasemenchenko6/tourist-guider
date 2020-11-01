@@ -43,6 +43,27 @@
           >
         </mat-card-content>
       </mat-card>
+
+      <mat-card>
+        <mat-card-content class="coord-container">
+          <div class="button-container">
+            <button mat-fab color="primary" aria-label="button for opening map">
+              <mat-icon>add_location_alt</mat-icon>
+            </button>
+            <small>Open Map</small>
+          </div>
+          <mat-form-field class="field-full-width">
+            <mat-label class="field-label">Latitude</mat-label>
+            <textarea matInput placeholder="Ex. 23.30002..."></textarea>
+            <mat-hint>Marker Latitude placement in the Map.</mat-hint>
+          </mat-form-field>
+          <mat-form-field class="field-full-width">
+            <mat-label class="field-label">longitude</mat-label>
+            <textarea matInput placeholder="Ex. 23.30002..."></textarea>
+            <mat-hint>Marker Longitude placement in the Map.</mat-hint>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>
