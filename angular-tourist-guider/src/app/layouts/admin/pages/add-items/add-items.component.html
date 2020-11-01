@@ -52,14 +52,22 @@
             </button>
             <small>Open Map</small>
           </div>
+
           <mat-form-field class="field-full-width">
             <mat-label class="field-label">Latitude</mat-label>
-            <textarea matInput placeholder="Ex. 23.30002..."></textarea>
+            <input matInput type="text" />
+            <button mat-button matSuffix mat-icon-button aria-label="Clear">
+              <mat-icon>close</mat-icon>
+            </button>
             <mat-hint>Marker Latitude placement in the Map.</mat-hint>
           </mat-form-field>
+
           <mat-form-field class="field-full-width">
             <mat-label class="field-label">longitude</mat-label>
-            <textarea matInput placeholder="Ex. 23.30002..."></textarea>
+            <input matInput type="text" />
+            <button mat-button matSuffix mat-icon-button aria-label="Clear">
+              <mat-icon>close</mat-icon>
+            </button>
             <mat-hint>Marker Longitude placement in the Map.</mat-hint>
           </mat-form-field>
         </mat-card-content>
