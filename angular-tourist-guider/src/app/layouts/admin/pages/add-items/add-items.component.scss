@@ -1,13 +1,19 @@
 @import "src/styles_variables.scss";
 
 .add-items-container {
-  min-height: $full-page-height;
   background-color: $bg-secondary;
-  padding-bottom: 30px;
 }
-
+.page-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 .form-container {
-  margin-top: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $bg-secondary;
 }
 .page-title {
   font-size: 24px;
@@ -63,12 +69,17 @@
   }
 }
 
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+}
+
 @media (min-width: 770px) {
   .page-title {
     padding-top: 60px;
   }
   .mat-card {
-    margin-bottom: 17px;
+    margin-bottom: 25px;
   }
   .coord-container {
     flex-direction: row;
