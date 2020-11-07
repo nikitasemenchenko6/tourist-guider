@@ -8,9 +8,3 @@ $bg-accent-hover: #78a7c0;
 $text-light: #fff4f4;
 $text-grey: #9f9f9f;
 $text-dark: #040404;
-
-$full-page-height: calc(100vh - 73px);
-
-@media (min-width: 770px) {
-  $full-page-height: calc(100vh - 53px);
-}
